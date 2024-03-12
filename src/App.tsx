@@ -18,10 +18,10 @@ function App() {
     <div className='flex flex-col text-slate-900'>
       <div className='flex flex-col gap-8 sm:flex-row'>
         <div className='w-9/12'>
-          <Question index={index} setIndex={setIndex} answers={answers} setAnswers={setAnswers} />
+          <Question index={index} answers={answers} setAnswers={setAnswers} />
           <Buttons index={index} setIndex={setIndex} setFinished={setFinished} />
         </div>
-        <div>
+        <div className='flex flex-col'>
           <AnswerSheet index={index} setIndex={setIndex} answers={answers} />
           <Timer setFinished={setFinished} />
         </div>

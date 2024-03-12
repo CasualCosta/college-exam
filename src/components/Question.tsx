@@ -1,15 +1,14 @@
-import React, { Dispatch, SetStateAction, useEffect, useState } from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 import { Questions } from '../Questions'
 import getLetter from '../getLetter'
 
 type Props = {
     index: number,
-    setIndex: Dispatch<SetStateAction<number>>,
     answers: number[],
     setAnswers: Dispatch<SetStateAction<number[]>>
 }
 
-const Question: React.FC<Props> = ({index, setIndex, answers, setAnswers}) => {
+const Question: React.FC<Props> = ({index, answers, setAnswers}) => {
     const { description, alternatives: alternatives } = Questions[index]
 
     function handleSelection(alternative: number) {
@@ -19,7 +18,7 @@ const Question: React.FC<Props> = ({index, setIndex, answers, setAnswers}) => {
         setAnswers(updated)
     }
     return (
-        <div className='pb-8'>
+        <div className='pb-8 flex flex-col justify-center'>
             <div className='text-left text-2xl mb-4 min-h-20'>
                 {index + 1}. {description}
             </div>

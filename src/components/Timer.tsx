@@ -23,7 +23,7 @@ const Timer: React.FC<Props> = ({setFinished}) => {
   return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
 }
     return (
-        <div className='flex flex-col my-8 gap-2 items-center'>
+        <div className='flex flex-col my-8 ml-9 sm:ml-0 gap-2 items-center justify-center max-w-48 mx-auto'>
             <button
                 className='w-40 px-2 py-1 border border-slate-700 rounded'
                 onClick={() => setShow(!show)}

@@ -11,7 +11,7 @@ const Buttons: React.FC<Props> = ({index, setIndex, setFinished}) => {
 
     return (
         <div className='flex flex-col items-center gap-4'>
-            <div className='flex flex-col justify-center gap-8 sm:flex-row'>
+            <div className='flex flex-col justify-center gap-4 sm:flex-row'>
                 <button
                     className='rounded border border-slate-700 disabled:opacity-0 w-40 py-2'
                     disabled={index === 0}
@@ -21,7 +21,7 @@ const Buttons: React.FC<Props> = ({index, setIndex, setFinished}) => {
                 </button>
                 <button
                     disabled={index == Questions.length - 1}
-                    className='rounded border border-slate-700 disabled:opacity-0 w-40'
+                    className='rounded border border-slate-700 disabled:opacity-0 w-40 py-2'
                     onClick={() => setIndex(index + 1)}
                     >
                     Next Question
