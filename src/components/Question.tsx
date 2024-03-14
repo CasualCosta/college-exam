@@ -18,7 +18,7 @@ const Question: React.FC<Props> = ({index, answers, setAnswers}) => {
         setAnswers(updated)
     }
     return (
-        <div className='pb-8 flex flex-col justify-center'>
+        <div className='flex flex-col justify-center'>
             <div className='text-left text-2xl mb-4 min-h-20'>
                 {index + 1}. {description}
             </div>
